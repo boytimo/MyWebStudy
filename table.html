@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heaviest Birds Table</title>
+</head>
+<body>
+    <h1>
+        Heavies Birds
+    </h1>
+    <h3>
+        <ol>   
+            <li>
+                            th 헤딩(열)
+
+            </li>
+            <li>
+                td(열)는 데이터 셀 또는 데이터를 줄인 말
+            </li>
+            <li>
+                tr (행)
+            </li>
+            <li>
+                thead, tbody 표 설명하기 쉽게하기 위한 헤더
+            </li>
+        </ol>
+        
+    </h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    종류    
+                </th>
+                <th>
+                    무게    
+                </th>
+                <th>
+                    최대 무게 
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                타조 
+            </td>
+            <td>
+                103kg
+            </td>
+            <td>
+                156
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                소말리아 타조
+            </td>
+            <td>
+                90
+            </td>
+            <td>
+                no
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>v2 열, 행 설정하기</h2>
+    <table>
+        <thead>
+            <tr>
+                <!-- rowspan= 2행 차지 -->
+                <th rowspan="2">
+                    동물
+                </th>
+                <!-- 2열 차지 -->
+                <th colspan="2">
+                    평균 무게    
+                </th>
+                <th rowspan="2">
+                    날 수 있는가
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    Kg
+                </th>
+                <th>
+                    LB
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                타조 
+            </td>
+            <td>
+                103kg
+            </td>
+            <td>
+                100lb
+            </td>
+            <td>
+                X
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                소말리아 타조
+            </td>
+            <td>
+                90kg
+            </td>
+            <td>
+                200lb
+            </td>
+            <td>
+                X
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

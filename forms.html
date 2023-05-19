@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    form 껍데기나 컨테이너에 가까움 요소의 집합<br>
+    action은 데이터를 보낼 위치와 시간은 이 속성이 지정<br>
+    placeholder 임시 텍스트
+    <br><br><br><br><br>
+    <BUtton>OUT SIDE FORM</BUtton><br><br><br>
+    label의 for username 과 input id username 이 같아서 label <br>
+    을 누르면 input 박스가 반응함<br>
+    <form action="/tacos">
+        button type = "button"하면 form /tacos로 가지 않음<br>
+        버튼이 폼 안에 있을 때의 기본 값은 submit 이다 <br>
+        <br><button type="button">PLEASE DO NOT SUBMIT THE FORM</button><br>
+
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text"placeholder="텍스트 입력">
+        </p>
+        <p>
+            <label for="password">Enter a password: </label>
+        <!-- 비밀번호 입력하는거 처럼 바뀜 -->
+            <input id="password" type="password"placeholder="password">
+        </p>
+        <BUTton>IN THE MIDDLE!</BUTton>
+        <p>
+            <label for="color">Enter a Color</label>
+            <input id="color" type="color">
+        </p>
+        <input type="number" placeholder="enter a number">
+        중첩으로 하면 for과 id 똑같이 안해도 됨
+        <p>
+            <label >
+                Enter a Number:
+                <input type="time" placeholder="enter a number">
+            </label>
+        </p>
+        form action과 연결
+        <button>
+            submit
+        </button>
+    </form>
+</body>
+</html>
