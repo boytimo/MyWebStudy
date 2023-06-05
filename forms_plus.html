@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Validations Demo</h2>
+
+<form action="/dummy">
+    minlength="5"maxlength="10" 최소 최대 입력란 설정<br>
+    required 적으면 텍스트안에 필수입력란 설정<br><br>
+    <label for="first">Enter First Name</label><br>
+    <input type="text"name="first"id="first" required>
+    <p>
+        <label for="username">Username</label>
+        <input type="text"id="username"name="username"minlength="5"maxlength="10">
+    </p>
+    <p>
+        required는 type속성에 맞게 적용됨<br>
+        <input type="email"required>
+        <input type="url"required>
+    </p>
+    <button>summit</button>
+
+    <h2>Race Registration!</h2>
+</form>
+    <form action="/race">
+        <p>
+            <label for="First">First Name</label>
+            <input type="text"id="First"name="First"required>
+            <label for="Last">Last Name</label>
+            <input type="text"id="Last"name="Last"required>
+        </p>
+        value는 속성 전달 값
+        <p>
+            Select a Race:
+
+        </p>
+   
+        <div> 
+            <input type="radio"name="radio"id="1"value="5k">
+            <label for="1">FUN RUN 5k</label><br>
+                
+            <input type="radio"name="radio"id="2"value="4k">
+            <label for="2">Half RUN 4k</label><br>
+                
+            <input type="radio"name="radio"id="3"value="3k">
+            <label for="3">NOT RUN 3k</label><br>
+        </div>
+        
+        <div>
+            <label for="email">Email</label>
+            <input type="email"id="email"name="email"required>
+            <label for="password">Password</label>
+            <input type="password"id="password"name="password"required>
+        </div>
+        <div>
+            <label for="group">Select Age Group</label>
+            <select name="group" id="group">
+                <option value="ee">under 18</option>
+                <option value="ee1">18-30</option>
+                <option value="ee2">30-50</option>
+                <option value="ee3">50+</option>
+            </select>
+        </div>
+
+    <button>Register!</button>
+    </form>
+    
+    
+
+</body>
+</html>

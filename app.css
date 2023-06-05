@@ -1,0 +1,45 @@
+h3
+{
+    color: red;
+    background-color: aquamarine;
+    text-decoration: line-through;
+}
+
+button
+{
+    color: #ed6767;
+    background-color: aqua;
+    font-size: 30px  
+}
+
+p
+{
+    text-align: center;
+    color: rgb(196, 26, 231);
+    font-weight: bold;
+    line-height: 2;
+    /* 줄간격 */
+    font-family: Arial;
+    /* 폰트변경 */
+}
+
+h1
+{
+    text-align: center;
+    font-weight: 700;
+    text-decoration: #ed6767 underline wavy;
+    /* wavy 물결표시 */
+    letter-spacing: 10px;
+    /* 폰트간격 */
+    font-size: 50px;
+    /* font-family: Segoe UI,Arial,Futura; */
+    font-family: monospace;
+    /* 뒤에 폰트 모양 설정을 더 넣으면 백업 모양 */
+}
+
+*
+{
+    background-color: rgb(3, 255, 183);
+}
+
+/* h1,h2 이런 형식으로 사용해도 됨 */

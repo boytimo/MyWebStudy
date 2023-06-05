@@ -1,0 +1,46 @@
+
+
+body
+{
+    background-color: aliceblue;
+}
+
+button
+{
+    font-size: 30px
+}
+
+h1,h2
+{
+    color:blueviolet
+}
+
+/* 고유 id로 만들기 */
+#change
+{
+    background-color: aqua;
+}
+
+/* class를 이용해서 id처럼 쓰기 */
+.tag
+{
+    background-color: tomato;
+    font-size: 20px;
+}
+
+/* 종속을 이용한 속성 바꾸기 p안에 a*/
+p a
+{
+    color: brown;
+}
+
+/* h3다음에 나오는 button의 속성 바꾸기 */
+h3+button
+{
+    color: magenta;
+}
+
+footer > a
+{
+    color: cornflowerblue;
+}
