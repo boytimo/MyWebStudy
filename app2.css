@@ -21,6 +21,7 @@ h1,h2
     background-color: aqua;
 }
 
+/* section[class="tag"], section.tag */
 /* class를 이용해서 id처럼 쓰기 */
 .tag
 {
@@ -43,4 +44,29 @@ h3+button
 footer > a
 {
     color: cornflowerblue;
+}
+
+/* type이 password만 바꿈 */
+input[type="password"]
+{
+    color:red
+}
+
+/* href에 google 단어가 포함돼있는거  */
+a[href*=google]
+{
+    color: magenta;
+}
+
+/* 마우스 올리면 색 바뀜 */
+.get button:hover
+{
+    background-color: red;
+    color: blue;
+}
+
+/* 클릭하면 색 바뀜 */
+button:active
+{
+    background-color: #0ef00a;
 }

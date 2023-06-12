@@ -1,0 +1,33 @@
+
+h1
+{
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    width: 300px;
+    height: 200px;
+    margin: 100px;
+    /* display: none; 화면에 안 보이게 설정 자바스크립트 사용시에 유용하게 사용가능 */
+}
+
+span
+{
+    background-color: palevioletred;
+    border: 1px solid black;
+    /* 이 라인에 아무것도 못 오게 만듬 */
+    display: inline;
+    /* 요소가 인라인 디스플레이라면 너비나 높이는 무시됨 (marge, pedding 제외)*/
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+}
+
+div
+{
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    border: 1px solid black;
+    /* display: inline; 인라인 요소에는 가로와 세로가 적용되지 않아서 이상하게 나옴 */
+    display: inline-block;
+    margin: 10px;
+}

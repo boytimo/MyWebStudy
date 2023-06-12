@@ -1,7 +1,20 @@
 
+
+
+body
+{
+    color: purple;
+}
+
 button
 {
     font-size: 30px;
+    /* color: inherit ; 어떤 색이라도 상속 받겠다*/
+}
+
+h1
+{
+    color: blue
 }
 
  /* :nth-of-type() n번째 지정선택 */
@@ -39,6 +52,7 @@ p button:hover
 button:hover
 {
     background-color: olive;
+    /* background-color: olive!important; 이거 사용하면 ID 선택자보다 우선순위가 더 높아짐 */
     font-size: 35px;
 }
 /* Id선택자가 젤 우선순위가 큼 (고유값) */
@@ -46,3 +60,4 @@ button:hover
 {
     background-color: blue;
 }
+
