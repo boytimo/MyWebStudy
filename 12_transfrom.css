@@ -1,0 +1,86 @@
+h1
+{
+    background-color: #2a9d8f;
+    border: 5px solid #264653;
+    color: #eae2b7;
+    padding: 0.7em;
+    width: 300px;
+    font-size: 1.8em;
+    text-align: center;
+    margin: 20px auto;
+    font-family: Courier New;
+    font-style: lighter;
+}
+
+h1:nth-of-type(2n)
+{
+    background-color: #e9c46a;
+}
+
+h1:nth-of-type(3n)
+{
+    background-color: #f4a261;
+}
+
+h1:nth-of-type(4n)
+{
+    background-color: #e76f51;
+}
+
+/* :first-of-type 첫 번째 항목에 적용 */
+section:first-of-type h1:nth-of-type(1)
+{
+    /* 우측 하단을 고정하여 회전(상단은 top) */
+    transform-origin:bottom right;
+    transform: rotate(30deg)
+}
+
+section:first-of-type h1:nth-of-type(2)
+{
+    /* scaleX,scaleY */
+    transform: scale(0.8, 1.5);
+}
+
+section:first-of-type h1:nth-of-type(3)
+{
+    /* scaleX,scaleY */
+    transform: translateX(50px);
+}
+
+section:first-of-type h1:nth-of-type(4)
+{
+    transform: translate(20px,20px);
+}
+
+section:nth-of-type(2) h1:nth-of-type(1)
+{
+    /* 기울기 */
+    transform: skew(30deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(2)
+{
+    /* 기울기 */
+    transform: skew(30deg,5deg);
+}
+
+section:nth-of-type(2) h1:nth-of-type(3)
+{
+    /* 기울기 */
+    transform: rotate(20deg) scale(0.5);
+}
+
+section:nth-of-type(2) h1:nth-of-type(4)
+{
+    transform: translateX(-70px) rotate(0.5turn) scaleY(0.5);
+}
+
+/* translate는 위치 rotate는 회전 scale은 크기 skew는 기울기 */
+/* button도 추가하면 같이 적용 */
+
+section:nth-of-type(2)
+{
+    transform: scale(0.7);
+}
+
+

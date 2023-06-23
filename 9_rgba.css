@@ -1,0 +1,26 @@
+/* 주제 = 불투명도 */
+
+section
+{
+    width: 500px;
+    height: 500px;
+    background-color: magenta;
+}
+
+/* 배경화면에만 영향 */
+#rgba
+{
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.8);
+    /* background-color: #1877c09f; */
+}
+
+/* 모든 컨텐츠가 영향 받음 */
+#opacity
+{
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.6;
+}

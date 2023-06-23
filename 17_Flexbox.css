@@ -1,0 +1,44 @@
+h1
+{
+    text-align: center;
+}
+
+#container
+{
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    /* flex넣으니깐 div가 section안에 정렬 */
+    display: flex;
+    /* row행 column열 */
+    flex-direction: row;
+
+    /* div가 section 오른쪽으로 붙음 column이면 밑으로 */
+    /* justify-content: flex-end; */
+
+    /* 중앙으로 정렬 */
+    justify-content: center;
+
+    /* 늘리면 div가 서로 멀어짐 */
+    /* justify-content: space-between; */
+    /* 최우,좌측 여백 생기면서 멀어짐 */
+    /* justify-content: space-around; */
+    /* 최우,좌측 포함 모든 여백이 같은 길이 */
+    /* justify-content: space-evenly; */
+/* --------------------------------------------- */
+    /* div 크기만큼 줄이면 상>하(wrap,wrap-reverse,nowrap) */
+    /* flex-wrap: wrap; */
+
+    /* justify-content는 주축  align-items는 교차축 */
+
+    align-items: flex-end;
+
+}
+
+#container div
+{
+    width: 200px;
+    height: 100px;
+}

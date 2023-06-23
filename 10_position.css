@@ -1,0 +1,63 @@
+
+div
+{
+    width: 100px;
+    height: 100px;
+    background-color: #3d405b;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+#middle
+{
+    background-color: #81b29a;
+}
+
+#static #middle
+{
+    position: static;
+    top: 100px;
+}
+
+/* top 50px만큼 내려감*/
+/* 오프셋을 주지 않은 원래 위치에서 상대적인 위치로 이동 */
+/* 문서 안에 요소의 원래 자리가 있기는 하지만 */
+/* 원래위치로 부터 상대적인 곳에 배치 */
+
+#relative #middle
+{
+    position: relative;
+    top: 50px;
+    left: 100px;
+}
+
+/* 요소가 문서의 일반적인 흐름에서는 제거되지만 */
+/* 가장 가까이 위치한 조상이 있다면 해당 조상을 기준으로 하거나 */
+/* 조상이 가까이 없다면 초기 컨테이닝 블록 */
+/* 즉 <body>를 기준으로 상대적인 위치에 배치됨 */
+#absolute #middle
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: tomato;
+}
+
+#absolute
+{
+    position: relative;
+}
+
+/* fixed로 지정되면 그자리에 계속 유지됨 */
+/* 배치되는 위치는 항상 컨테이닝 블록에 상대적 */
+/* fixed는 일반 문서 흐름에서 제거 */
+/* 공간도 차지하지 않으면 초기 컨테이닝 블록의 상대적 위치 */
+/* 스크롤 바 내려도 따라감 -> 네비게이션 바로 사용 */
+#fixed #middle
+{
+    position: fixed;
+    top: 110px;
+    left: 0px;
+    background-color: aqua;
+}

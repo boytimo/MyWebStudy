@@ -1,0 +1,54 @@
+
+section
+{
+    background-color: #6d6875;
+    width: 800px;
+    height: 800px;
+}
+
+
+div
+{
+    background-color: #e5898b; 
+    /* div가 section에 종속 되어있으니깐 부모의 50% 크기로 설정한다. */
+    width: 70%;
+    height: 20%;
+}
+
+h1
+{
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 80px;
+}
+
+/* 여백의 em은 요소의 글꼴 크기에 좌우됨 */
+/* 2em 부모의 2배 60px */
+article h2
+{
+    font-size: 1em;
+    margin-left: 1em
+}
+
+article h3
+{
+    font-size: 1.5em;
+}
+
+article p
+{
+    font-size: 0.7em;
+}
+article
+{
+    font-size: 50px
+}
+
+button
+{
+    font-size: 1em;
+    padding: 0 30px;
+    border-radius: 0.5em;
+    background-color: #2a9d8f;
+    color: white;
+}

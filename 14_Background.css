@@ -1,0 +1,21 @@
+section
+{
+    width: 80%;
+    height: 800px;
+    /* background-image: url(https://pbs.twimg.com/media/FDrXNAMWQAUhk0M.jpg); */
+    margin: 0 auto;
+    /* cover 박스 크기에 맞게 이미지가 최대한 나타남 */
+    /* contain 박스 크기에 맞게 최대한 나타나지만 반복되어사 나타남 */
+    /* background-size: cover; */
+    /* 배경이미지 하단 부분을 기준점으로 나타남 */
+    /* background-position: bottom; */
+
+    /* no-repeat/반복 X, 기준점/크기 순으로 해야 오류 X */
+    background: url(https://pbs.twimg.com/media/FDrXNAMWQAUhk0M.jpg) no-repeat center/40% #ed0505;
+}
+
+h1
+{
+    font-size: 100px;
+    color: #c9bcbc;
+}
