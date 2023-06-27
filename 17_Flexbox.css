@@ -7,15 +7,16 @@ h1
 {
     background-color: #003049;
     width: 90%;
-    height: 500px;
+    height: 150px;
     margin: 0 auto;
     border: 5px solid #003049;
     /* flex넣으니깐 div가 section안에 정렬 */
     display: flex;
     /* row행 column열 */
     flex-direction: row;
-
-    /* div가 section 오른쪽으로 붙음 column이면 밑으로 */
+    /* flex-direction: column; */
+/* --------------------------------------------- */
+    /* div가 section 오른쪽으로 붙음 column이면 밑으로(주축) */
     /* justify-content: flex-end; */
 
     /* 중앙으로 정렬 */
@@ -30,15 +31,73 @@ h1
 /* --------------------------------------------- */
     /* div 크기만큼 줄이면 상>하(wrap,wrap-reverse,nowrap) */
     /* flex-wrap: wrap; */
+    /* 교차축 뒤집음 */
+    /* flex-wrap: wrap-reverse; */
+/* --------------------------------------------- */
+    /*row 기준 justify-content는 주축<>  align-items는 교차축^v */
 
-    /* justify-content는 주축  align-items는 교차축 */
+    /* align-items: flex-end; */
+    align-items: center;
+    /* 텍스트의 기준선(밑)에 맞춰 정렬 */
+    /* align-items: baseline; */
 
-    align-items: flex-end;
+    /* align-content 두 줄 사이의 공간 조정(무조건 wrap 실행) */
+    /* wrap 상자끼리 뭉쳐서 내려옴 */
+    /* align-content: center; */
+    /* center와 달리 최대한 떨어짐 */
+    /* align-content: space-between; */
 
 }
 
 #container div
 {
-    width: 200px;
+    width: 100px;
     height: 100px;
+    font-size: 3em;
+    text-align: center;
+    /* (주축)flex-basis(처음크기)이 width,height 보다 우선 */
+    flex-basis: 300px;
+
+    /* 늘어나는 최대크기 */
+    max-width: 200px;
+    flex-grow: 1;
+}
+
+/* 따로 설정 */
+/* div:nth-of-type(3)
+{
+    align-self: flex-end;
+} */
+
+div:nth-of-type(1)
+{
+    flex-grow: 1;
+    /* 다른 요소에 비해 얼마나 줄어들지 */
+    flex-shrink: 2;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+main
+{
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid black;
+    height: 500px;
+    display: flex;
+}
+
+main .sidebar
+{
+    background-color: #6930c3;
+    border: 2px solid white;
+    /* 단위 없이 숫자만 입력하면 flex-grow로 인식 */
+    /* flex-grow|flex-shrink|flex-basis */
+    flex:1 2 100px;
+}
+
+main .maincontent
+{
+    background-color: #80ffdb;
+    flex:2 1 400px;
 }
