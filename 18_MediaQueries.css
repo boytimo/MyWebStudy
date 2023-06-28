@@ -1,5 +1,17 @@
 
 
+body
+{
+    font-family: 'Open Sans',sans-serif;
+}
+
+h1
+{
+
+    text-align: center;
+    font-size: 3em;
+}
+
 nav
 {
     font-size: 1.5em
@@ -7,15 +19,81 @@ nav
 
 ul,li
 {
+    /* display 속성이 inline으로 지정된 엘리먼트는 전후 줄바꿈 없이
+     한 줄에 다른 엘리먼트들과 나란히 배치 */
     display: inline;
     margin: 0;
     padding: 0;
 }
 
-@media(width: 800px)
+
+/* min-width,700px초과 = 보라색 */
+/* and 띄어쓰기 조심 600<x<800 = 보라색 */
+/* @media(min-width: 600px) and (max-width: 800px)
 {
     h1
     {
         color: purple;
     }
+} */
+
+/* 조건문 순서 신경 써야됨 css는 밑에가 우선   */
+
+/* @media(max-width: 800px)
+{
+    h1
+    {
+        color: yellow;
+    }
+@media(max-width: 600px)
+{
+    h1
+    {
+        color: orange;
+    }
+}
+@media(max-width: 400px)
+{
+    h1
+    {
+        color: red;
+    }
+} */
+
+h1
+{
+    color: red;
+}
+
+@media(min-width: 600px)
+{
+    h1
+    {
+        color: orange;
+    }
+}
+
+@media(min-width: 800px)
+{
+    h1
+    {
+        color: yellow;
+    }
+}
+
+@media(min-width:1000px)
+{
+    h1
+    {
+        color: green;
+    }
+}
+
+/* 오리엔테이션: 가로 */
+@media(orientation: landscape)
+{
+    body
+    {
+        background-color: pink;
+    }    
 }
