@@ -1,0 +1,194 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* css 리셋 내용 ~^ */
+html
+{
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+body
+{
+    background-color: #60a9ff;
+    display: flex;
+    /* 주축 */
+    justify-content: center;
+    /* 교차축 */
+    align-items: center;
+    /* 뷰포트(viewport)는 현재 화면에 보여지고 있는 다각형(보통 직사각형)의 영역 */
+    /* 1vh = 뷰포트 높이의 1% */
+    min-height: 100vh;
+}
+
+.panel
+{
+    background-color: white;
+    border-radius: 10px;
+    /* (상하)(좌우) padding 값 */
+    /* padding: 20px 40px; */
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    /* 열 기준 */
+    flex-direction: column;
+    /* 텍스트를 중앙으로 배치 */
+    text-align: center;
+    /* 모든 글자를 대문자로 전환 */
+    text-transform: uppercase;
+}
+
+/* div 클래스 */
+.pricing-plan
+{
+    border-bottom: 1px solid #e1f1ff;
+}
+
+/* 마지막 div 밑 줄 제거 */
+.pricing-plan:last-child
+{
+    border-bottom: none;
+}
+
+/* 이미지 여백 생성 */
+.pricing-img
+{
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* h2 */
+.pricing-header
+{
+    color: #888;
+    /* 글자굵기 */
+    font-weight: 600;
+    /* 폰트 간격 */
+    letter-spacing: 1px;
+}
+
+/* ul */
+.pricing-features
+{
+    margin: 50px 0 25px;
+    color: #015ff9
+}
+
+.pricing-features-item
+{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1f1ff;
+}
+
+.pricing-features-item :last-child
+{
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price
+{
+    color: #016ff9;
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* inline-block 줄바꿈이 이루어지지 않는다.
+block처럼 width와 height를 지정 할 수 있다.
+만약 width와 height를 지정하지 않을 경우, inline과 같이 컨텐츠만큼 영역이 잡힌다. */
+.pricing-button
+{
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348efe;
+    /* 테두리가 패딩과 가까이 */
+    display: inline-block;
+    padding: 15px 35px;
+    /* 텍스트 밑 줄 제거 */
+    text-decoration: none;
+    /* 위 아래 25px 좌우 0px */
+    margin: 25px 0px;
+    /* 애니메이션 */
+    transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:focus
+{
+    background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured
+{
+    background-color: #48aaff;
+    color: white;
+}
+
+.pricing-button.is-featured:hover, .pricing-button.is-featured:focus
+{
+    background-color: #269aff;
+    color: white;
+}
+
+@media(min-width: 900px)
+{
+    .panel
+    {
+        flex-direction: row;
+    }
+    .pricing-plan
+    {
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+    }
+    .pricing-plan:last-child
+    {
+        border-right: none;
+    }
+}
