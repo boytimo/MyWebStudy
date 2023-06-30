@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" hr  ef="19_Bootstrap.css">
+</head>
+<body>
+    <div>
+
+    <!-- 부트스트랩은 클래스 마다 다른 디자인-->
+    <!-- badge = 배지 -->
+    <!-- button.badge = 버튼에 badge 클래스 생성 -->
+     <h1 class="display-1 text-center text-primary">Bootstrap Playground</h1>
+     <h2 class="display-4">Buttons <span class="badge badge-success badge-pill">New</span></h2>
+     <h2 class="display-1 text-center">Hello</h2>
+
+    <button type="button"class="btn btn-primary">Primary</button>
+    <button type="button"class="btn btn-success">Success</button>
+    <button type="button"class="btn btn-info">Info</buttibon>
+    <button class="btn btn-outline-warning">Waring Outline</button>
+    <button class="btn btn-outline-danger">Danger Outline</button>
+    <button class="btn btn-outline-info btn-lg">Info Outline</button>
+    <button class="btn btn-outline-secondary btn-sm">SM Button</button>
+
+    <!-- disable 하니깐 클릭X -->
+    <button class="btn btn-success" disabled>Success Disable</button>
+
+    <button class="btn btn-primary">Updates <span class="badge badge-light">9</span></button>
+    <br><br><br>
+
+    <h3>Button Groups</h3>
+    <!-- .btn-group -> div class=btn-group -->
+    <div class="btn-group">
+        <button class="btn btn-warning">One</button>
+        <button class="btn btn-warning">Two</button>
+        <button class="btn btn-warning">Three</button>
+    </div>
+
+    <h3>Alerts</h3>
+    <!-- role="alert" 스크린리더에게 이건 중요한 정보라는 걸 표시해줌 -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">Oh No!</h4>
+        Danger! You are about to end the world as we know it!
+        <!-- 접두사가 aria인 특성인 접근성이나 스크린 리더와 관련이 있다 -->
+        <button aria-label="Close" class="close" data-dismiss="alert">
+            <!-- aria-hidden = 항상 등장할 필요가 없다 -->
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <h2 class="display-4">Typographey</h2>
+    <!-- blockquote  qff -->
+    <blockquote class="blockquote text-right bg-info"> 
+        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur est vitae, suscipit accusamus iure, quasi dolorem nostrum et, fugiat deserunt assumenda sequi sapiente. Explicabo laborum, hic libero ipsa earum officiis!</p>
+        <p>
+            <footer class="blockquote-koe">왜이래 잠오</footer>
+    </blockquote>
+    
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eos ut et, omnis eum illum, voluptates quo vero quod enim eaque, optio possimus vitae. Temporibus amet rerum pariatur itaque nobis.
+    Deleniti doloremque nostrum magnam fugiat, nulla assumenda cumque, in illo atque maiores iste voluptatum! Animi similique quia sunt fuga optio? Obcaecati voluptatem facere illo! Veniam laudantium ex numquam sit sint!
+</p>
+
+<!-- body 바로 뒤에 스크립트 추가 -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

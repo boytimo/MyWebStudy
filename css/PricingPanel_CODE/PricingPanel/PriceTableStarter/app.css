@@ -159,7 +159,10 @@ block처럼 width와 height를 지정 할 수 있다.
     transition: background-color 200ms ease-in-out;
 }
 
-.pricing-button:hover, .pricing-button:focus
+
+/* hover 와 focus는 마우스 커서가 올라가면 변하는 건 똑같지만 */
+/* focus는 초점이 맞춰젔을때도 변한다.(ex_키보드 tab 초점) */
+.pricing-button:focus, .pricing-button:hover
 {
     background-color: #e1f1ff;
 }
