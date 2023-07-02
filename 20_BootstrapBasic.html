@@ -32,11 +32,11 @@
 
         <h2 class="display-4">Responsive Grid</h2>
         <div class="row">
-            <!-- medium 중단점을 지나면 분리 -->
+            <!-- medium 중단점을 지나면 분리(md,lg,xl) -->
             <div class="col-md-6 col-xl-3 bg-info">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nisi inventore, nobis quo voluptas ab ex similique dicta dolore ullam aliquid impedit repudiandae amet facilis, dolores delectus voluptatibus nam ipsa?
             </div>
-            <div class="col-md-6 col-xl-3 bg-success">
+            <div class="col-md-6 col-xl-3 bg-success">  
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, itaque officiis voluptatibus tempora rem id? Tempora harum similique, commodi cupiditate molestias, rem quam ut at excepturi soluta eos deserunt quibusdam!
             </div>
             <div class="col-md-6 col-xl-3 bg-info">
@@ -46,6 +46,49 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, itaque officiis voluptatibus tempora rem id? Tempora harum similique, commodi cupiditate molestias, rem quam ut at excepturi soluta eos deserunt quibusdam!
             </div>
         </div>
+        <!-- 서로다른 사진 높이가 같아짐/no-gutters = 공백 없어짐 -->
+<div class="row no-gutters">
+    <div class="col-xl-4 col-md-6">
+        <img src="https://open3dmodel.com/wp-content/uploads/2019/12/Portal-2-Turret.jpg" alt="" class="img-fluid">
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <img src="https://store.nintendo.co.kr/media/catalog/product/cache/8e3c84988db1fdb90470f4d01453d879/e/8/e85a8b6836ae450985c3eeb47e5b5b7acc57ac201675ed51c47df8bc8fe31f66.jpg" alt="" class="img-fluid">
+    </div>
+    <div class="col-xl-4 col-md-6">
+        <img src="https://e0.pxfuel.com/wallpapers/579/634/desktop-wallpaper-aperture-laboratories-aperture-laboratories-for-your-mobile-tablet-explore-aperture-laboratories-aperture-science-aperture-laboratories.jpg" alt="" class="img-fluid">
+    </div>
+
+
+</div>
+
+    <h2>Grid Arignment</h2>
+    <!-- align = 맞추다 start,center,end -->
+    <div class="row align-items-start">
+        <div class="col-3 bg-danger">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime libero porro ex modi at nobis quod, voluptatibus et magni deserunt facilis facere aliquid omnis voluptas aut vero explicabo fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, itaque? Voluptate hic eligendi sunt harum sequi incidunt voluptatum quisquam dolores temporibus, in, deserunt eveniet. Reiciendis corporis neque beatae nam voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae cupiditate perferendis quibusdam delectus consequatur quia molestiae, id numquam. Autem qui optio sit porro atque sapiente accusantium, eum quo necessitatibus dolores!
+        </div>
+        <div class="col-3 bg-warning">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime libero porro ex modi at nobis quod, voluptatibus et magni deserunt facilis facere aliquid omnis voluptas aut vero explicabo fugit?
+        </div>
+        <div class="col-3 bg-success">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime libero porro ex modi at nobis quod, voluptatibus et magni deserunt facilis facere aliquid omnis voluptas aut vero explicabo fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quasi id ad praesentium aperiam quisquam aliquid atque repellat eaque impedit accusantium, ratione repellendus fugit incidunt ea, cum tempora quos modi.
+        </div>
+        <div class="col-3 bg-info align-self-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maxime libero porro ex modi at nobis quod, voluptatibus et magni deserunt facilis facere aliquid omnis voluptas aut vero explicabo fugit?
+        </div>
+    </div>
+
+    <h3>Justify Content</h3>
+    <!-- 테두리 생성 -->
+    <div class="row border justify-content-start justify-content-md-center justify-content-lg-between">
+        <div class="col-md-4 bg-primary">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus sed repellat totam nobis iure officiis sunt in tempora, quam consequatur perspiciatis quasi hic sit dolorum magnam illum voluptatum omnis dicta?
+        </div>
+        <div class="col-4 bg-info">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus sed repellat totam nobis iure officiis sunt in tempora, quam consequatur perspiciatis quasi hic sit dolorum magnam illum voluptatum omnis dicta?
+        </div>
+    </div>
+
     </div>
 
 
