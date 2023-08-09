@@ -866,53 +866,289 @@
 // console.log(highestRated)
 
 //------------------------------------------------
-// const add2 = (x,y) => {
-//     return x+y;
+// // const add2 = (x,y) => {
+// //     return x+y;
+// // }
+
+// // numbers.filter(n => {
+// //     return n < 10;
+// // })
+
+// // const validUserNames4 = usernames => (usernames.filter(m => m.length < 10));
+
+// // 객체네 function과 화살표연산자가 다름
+
+// const person = {
+//     firstName: 'Viggo',
+//     lastName: 'Mortensen',
+//     fullName: function () { //메서드 정의
+//         return `${this.firstName} ${this.lastName}`
+//     },
+//     fullName2: (() => {
+//         return `${this.firstName} ${this.lastName}`
+//     }),
+//     test: function (a) {
+//         return a;
+//     },
+
+//     shoutName: function () {
+//         setTimeout(() => {
+//             console.log(this);
+//             console.log(this.fullName());
+//         }, 3000)
+//     }
 // }
 
-// numbers.filter(n => {
-//     return n < 10;
-// })
 
-// const validUserNames4 = usernames => (usernames.filter(m => m.length < 10));
+// console.log(person.test(person.lastName))
+// console.log(person.fullName());
+// console.log(person.fullName2());
 
-// 객체네 function과 화살표연산자가 다름
+// // fullName: function() {}
+// // 일반 함수로 선언된 fullName은 호출시점에 this가 결정됩니다.
+// // 즉, this는 그 함수가 어디서 호출되었는지에 따라 달라집니다.
+// // 따라서, 이 함수는 해당 객체의 firstName과 lastName 속성을 참조할 수 있습니다.
 
-const person = {
-    firstName: 'Viggo',
-    lastName: 'Mortensen',
-    fullName: function () { //메서드 정의
-        return `${this.firstName} ${this.lastName}`
-    },
-    fullName2: (() => {
-        return `${this.firstName} ${this.lastName}`
-    }),
-    test: function (a) {
-        return a;
-    },
+// // fullName2: (() => {})
+// // 화살표 함수로 선언된 fullName2는 화살표 함수의 this가 선언시점에 결정됩니다.
+// //  화살표 함수는 자신만의 this를 가지지 않고,
+// //  화살표 함수가 선언된 범위에서 this를 상속받습니다.
+// //  이 경우, this는 일반적으로 전역 객체를 가리키게 됩니다.
+// //  따라서 이 화살표 함수는 객체의 firstName과 lastName 속성을 참조하지 못하고,
+// //  undefined를 반환할 확률이 높습니다.
+//-----------------------------------------------------------------
+// 디폴트 매개변수
+// function rollDie(numSides) {
+//     if (numSides === undefined) {
+//         numSides = 6;
+//     }
+//     return Math.floor(Math.random() * numSides) + 1
+// }
 
-    shoutName: function () {
-        setTimeout(() => {
-            console.log(this);
-            console.log(this.fullName());
-        }, 3000)
-    }
+// function rollDie2(numSides = 6) { //디폴트 값 값을 아무것도 넣지 않는다면 numSides에 6을 대입
+//     return Math.floor(Math.random() * numSides) + 1;
+// }
+
+
+// //매개변수가 두개인 경우, 매개변수 값을 하나만 대입 할때 디폴트 매개변수를 두 번째나 세 번째에 넣어야 함 
+// function greet(msg = "Hey there", person) { // greet("이야") --> 이야, undefined!
+//     console.log(`${msg}, ${person}!`);
+// }
+
+// function greet2(msg, person = "Hey there") { // greet("이야") -> 이야, Hey there 
+//     console.log(`${msg}, ${person}!`);
+// }
+
+// function greet3(msg, person = "Hey there", punk = '!') { //  
+//     console.log(`${msg}, ${person}${punk}`);
+// }
+
+//--------------------------------------------------------------
+
+//확장
+
+// const nums = [52, 63, 17, 7, 4, 664, 2, 64, 125, 3, 62, 466];
+
+
+// console.log(Math.max(nums)); // -> NaN
+// console.log(Math.max(...nums)); // -> 664
+
+// console.log(nums); //->  [52, 63, 17, 7, 4, 664, 2, 64, 125, 3, 62, 466]
+// console.log(...nums); // ->52 63 17 7 4 664 2 64 125 3 62 466
+
+// console.log('hello') //-> hello
+// console.log('h', 'e', 'l', 'l', 'o') //-> h e l l o
+// console.log(...'hello') //-> h e l l o
+
+//-------------------------------------------------------------
+
+
+
+// const cats = ['Blue', 'Scout', 'Rocket'];
+// const dogs = ['Rusty', 'Wyatt']
+
+// //cats + dogs 
+// const allPets = [...cats, ...dogs, "speedy"];
+
+// console.log(allPets)//->['Blue', 'Scout', 'Rocket', 'Rusty', 'Wyatt', 'speedy']
+
+// const hello = [..."hello"]
+// console.log(hello) //-> h e l l o
+
+//---------------------------------------------
+
+//객체 여러개를 한 객체로 묶을 수 있음
+
+// let feline = { legs: 4, family: 'felidae' };
+
+// const canine = { isFurry: true, family: 'Caninae' };
+
+// console.log({ ...feline }); // = feline   
+
+// // {legs: 4, family: 'felidae'}
+// // family: "felidae"
+// // legs: 4
+// // [[Prototype]]: Object
+// feline = { ...feline, color: 'black' };
+
+// console.log({ ...feline }) //->{legs: 4, family: 'felidae', color: 'black'}
+
+// console.log({ ...feline, ...canine }) //canine을 feline에 복붙
+
+// console.log({ ...feline, ...canine, family: 'Steele' }) //-> family 값 수정
+
+
+
+// console.log({ ...[0, 1, 2, 3] }) // ->{0: 0, 1: 1, 2: 2, 3: 3}
+
+
+// console.log({ ..."boytimo" }) //->{0: 'b', 1: 'o', 2: 'y', 3: 't', 4: 'i', 5: 'm', 6: 'o'}
+
+
+// const catDog = { ...feline, ...canine };
+
+// const dataFromForm = {
+//     email: `boytimo369@naver.com`,
+//     password: 'tobias 123',
+//     username: 'tfunke'
+// }
+
+// const newUser = { ...dataFromForm, id: 2345, isAdmin: false }
+
+// console.log(newUser) //->
+// //{email: 'boytimo369@naver.com', password: 'tobias 123', username: 'tfunke', id: 2345, isAdmin: false}
+
+//--------------------------------------------------------------------
+
+//Rest(나머지) 매개 변수
+//인수는 화살표 함수에서 사용 할 수 없다
+// function sum() {
+//     return arguments.reduce((total,el) => total + el)
+// }
+
+// function sum(...nums) {
+//     return nums.reduce((total, el) => total + el);
+// }
+
+// console.log(sum(5, 5, 6, 12)) //-> 28
+
+// function raceResults(gold, silver, ...everyoneElse) {
+//     console.log(`Gold Medal Goes to: ${gold}`)
+//     console.log(`silver Medal Goes to: ${silver}`)
+//     console.log(`everyoneElse Medal Goes to: ${everyoneElse.reduce((total, el) => total + el)}`)
+// }
+// // raceResults(5,2,(5,52,5))
+// // Conditionals.js:1036 Gold Medal Goes to: 5
+// // Conditionals.js:1037 silver Medal Goes to: 2
+// // Conditionals.js:1038 everyoneElse Medal Goes to: 5
+
+//------------------------------------------------------------------
+// 배열 구조 분해
+// const scores = [9999,8888,7777,6666,5555,4444];
+
+// const highScore = scores[0];
+// const seconsHighScore = scores[1];
+
+// const [gold,silver,bronze,...everyoneElse] = scores;
+
+// console.log(gold); //-> 9999
+// console.log(silver); //-> 8888
+// console.log(bronze); // -> 7777
+// console.log(everyoneElse); //-> 6666,5555,4444
+
+// -------------------------------------------------------------
+
+//객체 구조 분해
+
+// const user = {
+//     email: 'boytimo369@naver.com',
+//     firstName: 'Park',
+//     lastName: 'SeHyun',
+//     born: 1999,
+//     bio: 'korean man',
+//     city: 'Busan',
+//     state: 'korean'
+// }
+
+// const user2 = {
+//     email2: 'boytimo369@google.com',
+//     firstName: 'Park',
+//     lastName: 'SeHyun',
+//     born: 1888,
+//     bio: 'korean man',
+//     city: 'Busan',
+//     state: 'korean'
+// }
+
+// // const firstName = user.firstName;
+// // const lastName = user.lastName;
+// //const email = user.email;
+
+// const { email, firstName, lastName, city, bio } = user;
+// console.log(email) //->user의 이메일정보 
+
+// const { born: birthYear } = user; //->user.born -> birthYear
+
+// const {email2, died = "N/A"} = user2
+// // N/A -> 객체내 died 변수가 없을 경우 died = N/A 
+//------------------------------------------------------
+
+//매개변수 분해
+
+const user = {
+    email: 'boytimo369@naver.com',
+    firstName: 'Park',
+    lastName: 'SeHyun',
+    born: 1999,
+    bio: 'korean man',
+    city: 'Busan',
+    state: 'korean'
 }
 
+function fullName(name) {
+    const { firstName, lastName } = user
+    return `${firstName} ${lastName}`
+}
 
-console.log(person.test(person.lastName))
-console.log(person.fullName());
-console.log(person.fullName2());
+console.log(fullName(user))
 
-// fullName: function() {}
-// 일반 함수로 선언된 fullName은 호출시점에 this가 결정됩니다.
-// 즉, this는 그 함수가 어디서 호출되었는지에 따라 달라집니다.
-// 따라서, 이 함수는 해당 객체의 firstName과 lastName 속성을 참조할 수 있습니다.
+function fullName2({ firstName, lastName = '디폴트값' }) {
+    return `${firstName} ${lastName}`
+}
 
-// fullName2: (() => {})
-// 화살표 함수로 선언된 fullName2는 화살표 함수의 this가 선언시점에 결정됩니다.
-//  화살표 함수는 자신만의 this를 가지지 않고,
-//  화살표 함수가 선언된 범위에서 this를 상속받습니다.
-//  이 경우, this는 일반적으로 전역 객체를 가리키게 됩니다.
-//  따라서 이 화살표 함수는 객체의 firstName과 lastName 속성을 참조하지 못하고,
-//  undefined를 반환할 확률이 높습니다.
+console.log(fullName2(user))
+
+const movies = [
+    {
+        title: 'Amadeus',
+        score: 99
+    },
+    {
+        title: 'Stand By Me',
+        score: 85
+    },
+    {
+        title: 'Parasite',
+        score: 89
+    },
+    {
+        title: 'Alien',
+        score: 70
+    },
+    {
+        title: 'Titanic',
+        score: 98
+    },
+]
+
+//movies.filter((movie) => movie.score >= 90)
+//movies.filter(({score}) => score >= 90)
+
+movies.map(movie => {
+    return `${movie.title} is rated ${movie.score}`
+})
+
+
+movies.map(({ title, score, year }) => {
+    return `${title} (${year}) is rated ${score}`
+})
