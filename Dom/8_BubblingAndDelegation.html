@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section onclick="alert('section clicked')">
+        <p onclick="alert('paragraph Clicked')">
+            I am a papragraph:
+            <button onclick="alert('button clicked')">Click</button>
+        </p>
+    </section>
+    맨 아래에서 맨 위로 버블링 button -> p -> section
+
+    <div id="container">
+        Click To Hide
+        <button id="changeButton">Change Color</button>
+    </div>
+
+    <script src="8_BubblingAndDelegation.js"></script>
+
+</body>
+
+</html>

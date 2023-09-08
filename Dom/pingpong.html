@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulma 사용</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        /* #score {
+            border: 2px solid black;
+        }
+
+        .winner {
+            color: green;
+        }
+
+        .loser {
+            color: red;
+        } */
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <figure class="image is-2by1">
+                            <img
+                                src="https://img.freepik.com/free-vector/people-playing-table-tennis_23-2148662303.jpg">
+
+                        </figure>
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                ping pong score keeper
+                            </p>
+                            <button class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </header>
+                        <div class="card-content">
+
+                            <div class="content">
+                                <!-- div === span  -->
+                                <h1 class="title is-size-1"><span id="p1Display">0</span> to <span
+                                        id="p2Display">0</span>
+                                </h1>
+
+                                <p class="subtitle">Use the buttons below to score</p>
+                                <h2>Playing to </h2>
+
+                                <label for="playto" class="label is-large is-inline">Playing To</label>
+                                <div class="select is-rounded">
+                                    <select name="meal" id="playto">
+                                        <option value=5>5</option>
+                                        <option value=6>6</option>
+                                        <option value=7>7</option>
+                                        <option value=8>8</option>
+                                        <option value=9>9</option>
+                                        <option value=10>10</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <footer class="card-footer">
+                            <button id="p1Button" class="is-primary button card-footer-item">+1 Player One</button>
+                            <button id="p2Button" class="is-info button card-footer-item">+1 Plyer Two</button>
+                            <button id="resetButton" class="is-danger button card-footer-item">Reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <img src="https://img.freepik.com/free-vector/people-playing-table-tennis_23-2148662303.jpg">
+    <h3>ping pong score keeper</h3>
+    <div id="score">
+        <!-- div === span  -->
+        <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+        <p>Use the buttons below to score</p>
+        <h2>Playing to </h2>
+        <select name="meal" id="playto">
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+        </select>
+    </div>
+
+    <div>
+        <button id="p1Button">+1 Player One</button>
+        <button id="p2Button">+1 Plyer Two</button>
+        <button id="resetButton">Reset</button>
+    </div>
+
+
+
+    <script src="pingpong.js"></script>
+</body>
+
+</html>
