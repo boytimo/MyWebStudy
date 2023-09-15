@@ -983,7 +983,7 @@
 
 // const canine = { isFurry: true, family: 'Caninae' };
 
-// console.log({ ...feline }); // = feline   
+// console.log({ ...felsine }); // = feline   
 
 // // {legs: 4, family: 'felidae'}
 // // family: "felidae"

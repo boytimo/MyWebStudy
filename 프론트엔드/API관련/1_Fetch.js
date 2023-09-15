@@ -59,7 +59,6 @@ const loadStarWarsPeople = async () => {
     } catch (e) {
         console.log("ERROR", e);
     }
-
 }
 
 loadStarWarsPeople();
